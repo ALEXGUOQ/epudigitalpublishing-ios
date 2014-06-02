@@ -13,52 +13,51 @@ You can include EPU inside your application only if your app is UINavigationcont
 		import <epuFramework/EPUengine.h>
 
 4. Init EPU in your code
-	// 	Init engine (EPU instance is shared across your application)
-	//
-	EPUengine* sharedSingleton = [EPUengine sharedInstance];
-	// 	Set your apicode
-	//
-	sharedSingleton.apicode = @“xxxxxxxx”;
-	//	Set book by id
-  //
-	sharedSingleton.book = @"73";
-	//	Set edition by id
-	//
-	sharedSingleton.edition = @"1361";
+	* // 	Init engine (EPU instance is shared across your application)
+	* //
+	* EPUengine* sharedSingleton = [EPUengine sharedInstance];
+	* // 	Set your apicode
+	* //
+	* sharedSingleton.apicode = @“xxxxxxxx”;
+	* //	Set book by id
+	* sharedSingleton.book = @"73";
+	* //	Set edition by id
+	* //
+	* sharedSingleton.edition = @"1361";
 
 5. Framework to add to your project:
 
-		MessageUI
-		QuartzCore
-		AVFoundation
-		CoreMedia
-		MobileCoreService
-		Security
-		SystemConfiguration
-		CoreData
-		libsqlite3.0
-		epuFramework
-		CFNetwork
-		UIKit
-		Foundation
-		CoreGraphics
+		* MessageUI
+		* QuartzCore
+		* AVFoundation
+		* CoreMedia
+		* MobileCoreService
+		* Security
+		* SystemConfiguration
+		* CoreData
+		* libsqlite3.0
+		* epuFramework
+		* CFNetwork
+		* UIKit
+		* Foundation
+		* CoreGraphics
 
 Your EPU book is linked!
 
 ## EPU Proprieties:
 You can set this proprieties:
 
- NSString  server
- NSString  book
- NSString  edition
- NSString  apicode
- NSString  agent
- NSString  subscriptionTransactionId
- NSString  searchForText
- NSString  hMode (DOUBLE) DOUBLE/SINGLE
- NSString  maxZoom (3.0) 0.0->5.0
- int perc (10) recommended values: 10->20
- int epuLog (0) 0/1 if 1 show Log for EPU
+ * NSString  server
+ * NSString  book
+ * NSString  edition
+ * NSString  apicode
+ * NSString  agent
+ * NSString  subscriptionTransactionId
+ * NSString  searchForText
+ * NSString  hMode (DOUBLE) DOUBLE/SINGLE
+ * NSString  maxZoom (3.0) 0.0->5.0
+ * int perc (10) recommended values: 10->20
+ * int epuLog (0) 0/1 if 1 show Log for EPU
 
 
 ##	EPU Methods:
