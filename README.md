@@ -9,8 +9,8 @@ You can include EPU inside your application only if your app is UINavigationcont
 2. Copy folder res in your project
 
 3. Include framework in your view controller
-	#import <epuFramework/EpuViewController.h>
-	#import <epuFramework/EPUengine.h>
+		import <epuFramework/EpuViewController.h>
+		import <epuFramework/EPUengine.h>
 
 4. Init EPU in your code
 	// 	Init engine (EPU instance is shared across your application)
@@ -28,20 +28,20 @@ You can include EPU inside your application only if your app is UINavigationcont
 
 5. Framework to add to your project:
 
-	MessageUI
-	QuartzCore
-	AVFoundation
-	CoreMedia
-	MobileCoreService
-	Security
-	SystemConfiguration
-	CoreData
-	libsqlite3.0
-	epuFramework
-	CFNetwork
-	UIKit
-	Foundation
-	CoreGraphics
+		MessageUI
+		QuartzCore
+		AVFoundation
+		CoreMedia
+		MobileCoreService
+		Security
+		SystemConfiguration
+		CoreData
+		libsqlite3.0
+		epuFramework
+		CFNetwork
+		UIKit
+		Foundation
+		CoreGraphics
 
 Your EPU book is linked!
 
