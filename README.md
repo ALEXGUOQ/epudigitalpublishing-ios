@@ -1,6 +1,6 @@
 ##	EPUDigitalPublishing
 
-A simple application for include EPU service inside your applications.
+A simple application for include EPU service inside your applications. You need an APIKEY for use EPU library, you can get it on: http://epudigitalpublishing.com
 
 ##	How to install EPU framework inside your application
 You can include EPU inside your application only if your app is UINavigationcontroller based. EPU view is pushed inside your navigation controller stack.
@@ -13,34 +13,36 @@ You can include EPU inside your application only if your app is UINavigationcont
 		import <epuFramework/EPUengine.h>
 
 4. Init EPU in your code
-	* // 	Init engine (EPU instance is shared across your application)
-	* //
-	* EPUengine* sharedSingleton = [EPUengine sharedInstance];
-	* // 	Set your apicode
-	* //
-	* sharedSingleton.apicode = @“xxxxxxxx”;
-	* //	Set book by id
-	* sharedSingleton.book = @"73";
-	* //	Set edition by id
-	* //
-	* sharedSingleton.edition = @"1361";
+	
+>
+	 // 	Init engine (EPU instance is shared across your application)
+	 //
+	 EPUengine* sharedSingleton = [EPUengine sharedInstance];
+	 // 	Set your apicode
+	 //
+	 sharedSingleton.apicode = @"xxxxxxxx";
+	 //	Set book by id
+	 sharedSingleton.book = @"73";
+	 //	Set edition by id
+	 //
+	 sharedSingleton.edition = @"1361";
 
 5. Framework to add to your project:
 
-		* MessageUI
-		* QuartzCore
-		* AVFoundation
-		* CoreMedia
-		* MobileCoreService
-		* Security
-		* SystemConfiguration
-		* CoreData
-		* libsqlite3.0
-		* epuFramework
-		* CFNetwork
-		* UIKit
-		* Foundation
-		* CoreGraphics
+		 MessageUI
+		 QuartzCore
+		 AVFoundation
+		 CoreMedia
+		 MobileCoreService
+		 Security
+		 SystemConfiguration
+		 CoreData
+		 libsqlite3.0
+		 epuFramework
+		 CFNetwork
+		 UIKit
+		 Foundation
+		 CoreGraphics
 
 Your EPU book is linked!
 
@@ -62,14 +64,14 @@ You can set this proprieties:
 
 ##	EPU Methods:
 
-	###	-(NSMutableDictionary *)getDataFromServer:(bool)online;
+*		-(NSMutableDictionary *)getDataFromServer:(bool)online;
 		Return list of available editions for your book.
 		Return NSMutableDictionary for keys: editions , 		subscriptions.
 	- Key editions contains an Array of dictionary with list of editions for your book.
 	- Subscriptions key contains an array for your book subscriptions.
-
-	###	-(void)openEPUView:(UINavigationController *)nc animated:(bool)animated;
-	Open EPU view pushing view in your UINavigationcontroller.
+>
+*		-(void)openEPUView:(UINavigationController *)nc animated:(bool)animated;
+	* Open EPU view pushing view in your UINavigationcontroller.
 
 
 ##	Returned messages:

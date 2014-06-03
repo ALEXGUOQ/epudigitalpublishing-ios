@@ -12,8 +12,7 @@
 @implementation EPUapiAppDelegate
 
 @synthesize window = _window;
-//@synthesize navigationController;
-@synthesize connettivita;
+@synthesize connectivity;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -25,9 +24,9 @@
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus != NotReachable) {
-        self.connettivita = TRUE;
+        self.connectivity = TRUE;
     } else {
-        self.connettivita = FALSE;
+        self.connectivity = FALSE;
     }
     
     home *hom = [[home alloc] init];
@@ -56,6 +55,13 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus != NotReachable) {
+        self.connectivity = TRUE;
+    } else {
+        self.connectivity = FALSE;
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"restart" object:nil];
 }
 
@@ -74,14 +80,12 @@
     if(curReach == hostReach)
     {
         if ([curReach currentReachabilityStatus] == NotReachable) {
-			self.connettivita = FALSE;
-            
+			self.connectivity = FALSE;
 		} else {
-            
-            if (self.connettivita == false) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshView" object:nil];
+            if (self.connectivity == false) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"restart" object:nil];
             }
-            self.connettivita = TRUE;
+            self.connectivity = TRUE;
 		}
 		
 	}

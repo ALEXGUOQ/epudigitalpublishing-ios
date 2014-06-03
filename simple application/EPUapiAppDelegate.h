@@ -17,7 +17,7 @@
     Reachability* internetReach;
     Reachability* wifiReach;
 
-    bool connettivita;
+    bool connectivity;
 }
 
 -(void)manageEPUMessage:(NSMutableDictionary *)dic;
@@ -25,6 +25,6 @@
 //  Proprietà
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 //@property (nonatomic, strong) navcontroller *navigationController;
-@property(nonatomic)bool connettivita;
+@property(nonatomic)bool connectivity;
 
 @end

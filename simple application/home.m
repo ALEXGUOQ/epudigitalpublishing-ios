@@ -46,7 +46,7 @@
 
 -(void)reloadData {
     EPUapiAppDelegate *mainDelegate = (EPUapiAppDelegate *)[[UIApplication sharedApplication]delegate];
-    NSMutableDictionary *dict = [sharedSingleton getDataFromServer:mainDelegate.connettivita];
+    NSMutableDictionary *dict = [sharedSingleton getDataFromServer:mainDelegate.connectivity];
     editions = [dict objectForKey:@"editions"];
     [tbl reloadData];
     [tbl setAlpha:1.0];
