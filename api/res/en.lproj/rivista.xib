@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpuViewController">
             <connections>
                 <outlet property="btnCorPrecedente" destination="105" id="127"/>
-                <outlet property="btnCorrelato" destination="108" id="110"/>
                 <outlet property="btnGoIndietro" destination="16" id="155"/>
                 <outlet property="btnReturn" destination="4" id="125"/>
                 <outlet property="btnShowMultimedia" destination="129" id="130"/>
@@ -18,7 +16,6 @@
                 <outlet property="imgFumetto" destination="15" id="92"/>
                 <outlet property="imgPreferitoAggiunto" destination="148" id="149"/>
                 <outlet property="immVistaAcquista" destination="12" id="93"/>
-                <outlet property="lblContatoreArticoli" destination="121" id="122"/>
                 <outlet property="lblLoader" destination="17" id="94"/>
                 <outlet property="lblPercentuale" destination="5" id="95"/>
                 <outlet property="mainScrolla" destination="3" id="97"/>
@@ -54,7 +51,7 @@
                         <action selector="indietro" destination="-1" eventType="touchUpInside" id="126"/>
                     </connections>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10000" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="3" userLabel="mainScrolla">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" id="3" userLabel="mainScrolla">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="984"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +63,7 @@
                     <rect key="frame" x="359" y="466" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view tag="10001" contentMode="scaleToFill" id="6" userLabel="viewCassetto">
+                <view contentMode="scaleToFill" id="6" userLabel="viewCassetto">
                     <rect key="frame" x="0.0" y="984" width="768" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
@@ -78,7 +75,7 @@
                             <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16" userLabel="btnCassettoIndietro">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16" userLabel="btnCassettoIndietro">
                             <rect key="frame" x="8" y="9" width="42" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -93,7 +90,7 @@
                                 <action selector="indietro" destination="-1" eventType="touchUpInside" id="102"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="14" userLabel="btnCassettoIndice">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="14" userLabel="btnCassettoIndice">
                             <rect key="frame" x="345" y="9" width="78" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -108,7 +105,7 @@
                                 <action selector="apriChiudiCassetto" destination="-1" eventType="touchUpInside" id="100"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="105" userLabel="btnCassettoPagPrecedente">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="105" userLabel="btnCassettoPagPrecedente">
                             <rect key="frame" x="685" y="5" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -123,39 +120,17 @@
                                 <action selector="vaiACorrPrecedente" destination="-1" eventType="touchUpInside" id="107"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="108" userLabel="btnCassettoCorrelato">
-                            <rect key="frame" x="79" y="5" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" backgroundImage="correlato.png">
-                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="disegnaProdottiCorrelati" destination="-1" eventType="touchUpInside" id="111"/>
-                            </connections>
-                        </button>
                         <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="fumetto.png" id="15">
                             <rect key="frame" x="0.0" y="-49" width="61" height="49"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10002" contentMode="scaleToFill" alwaysBounceHorizontal="YES" id="116" userLabel="scrViewCarosello">
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" alwaysBounceHorizontal="YES" id="116" userLabel="scrViewCarosello">
                             <rect key="frame" x="0.0" y="40" width="768" height="20"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="124"/>
                             </connections>
                         </scrollView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="121">
-                            <rect key="frame" x="235" y="9" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="147">
                             <rect key="frame" x="0.0" y="0.0" width="768" height="1"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -217,7 +192,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                            <state key="normal" title="Annulla">
+                            <state key="normal" title="Cancel">
                                 <color key="titleColor" red="0.070588235289999995" green="0.51764705879999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -244,7 +219,6 @@
         </view>
     </objects>
     <resources>
-        <image name="correlato.png" width="40" height="40"/>
         <image name="fumetto.png" width="61" height="49"/>
         <image name="home.png" width="42" height="18"/>
         <image name="index.png" width="75" height="18"/>

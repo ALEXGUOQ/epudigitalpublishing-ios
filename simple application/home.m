@@ -33,6 +33,7 @@
     //  Init EPU
     //
     sharedSingleton = [EPUengine sharedInstance];
+    sharedSingleton.epuLog = 1;
     sharedSingleton.apicode = @"test";
     sharedSingleton.book = @"73";
 
